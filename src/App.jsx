@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Gallery from "./components/Gallery";
-import DestinationSelector from './DestinationSelector';
+import DestinationSelector from './components/DestinationSelector';
 import toursData from './toursData';
 
 function App() {
