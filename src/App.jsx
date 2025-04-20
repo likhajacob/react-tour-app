@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Gallery from './Gallery';
+import Gallery from "./components/Gallery";
 import DestinationSelector from './DestinationSelector';
 import toursData from './toursData';
 
