@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Gallery from "./components/Gallery";
 import DestinationSelector from './components/DestinationSelector';
 
-
 function App() {
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,9 +12,9 @@ function App() {
     setLoading(true);
     setError(false);
     try {
-      // Simulate API fetching
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setTours(toursData);
+      const response = await fetch('https://course-api.com/react-tours-project');
+      const data = await response.json();
+      setTours(data);
     } catch (error) {
       console.error('Error fetching tours:', error);
       setError(true);
